@@ -1,59 +1,115 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FDND Visitekaartje</title>
-    <link rel="stylesheet" href="styles/style.css">
-  </head>
-  <body>
-    
-    <article>
-      
-      <header>
-        
-        <h1>Amber Schalker</h1>
 
-        <p><em>Creatieve Frontend Developer uit Utrecht</em></p>
-        
-        <button>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <title>Wijzig layout</title>
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-        </button>
-        
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FDND Visitekaartje</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- <div class="kaartje">
+
+        <header>
+          <div class="overlay"></div>
+          <h1>Amber Schalker</h1>
+          <p>Student FDND</p>
       </header>
-  
-      <img src="assets/profile-amber.jpg" alt="" width="800" height="800">
 
-      <dl>
-        <dt>Design</dt>
-        <dd>🏆🏆🏆🏆</dd>
-        
-        <dt>Techniek</dt>
-        <dd>🏆🏆</dd>
-        
-        <dt>Communicatie</dt>
-        <dd>🏆🏆🏆</dd>
-      </dl>
-  
-      <p>Ik ben 21 jaar en kom uit Nieuwegein <br> Ik vind het leuk omechnologie en design combineren tot een visueel concept.</p>
-      
-    </article>
+      <main>
+          <div class="divider"></div>
+        <ul>
+          <li>
+            <i class="fa fa-phone"></i>
+            <a href="0655805033">0655805033</a></li>
+          <li>
+           <i class="fa fa-envelope"></i>
+           <a href="amschalker@gmail.com">amschalker@gmail.com</a></li>
+        </ul>
+        <div class="qrcode">
+           <img src="assets/qrcode.png" alt="qr code portfolio van Amber Schalker">
+        </div>
+      </main>
+    </div> -->
 
-    <script src="scripts/script.js"></script>
-    
-  </body>
+
+
+  <div id="flip-card">
+    <div class="flip-card-front">
+      <button id="flip-card-btn-turn-to-back">Switch to back</button>
+      <div class="overlay"></div>
+      <h1>Amber Schalker</h1>
+      <p>Student FDND</p>
+      <div class="divider"></div>
+      <main class="item-container" id="item-container">
+        <div class="tooltip"><i class="fa fa-user"></i>Wie ben ik
+          <span class="tooltiptext">
+            Ik ben Amber, 21 jaar en ik kom uit Nieuwegein.
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-pencil"></i>Mijn hobby's
+          <span class="tooltiptext">
+            Hardlopen, lezen, gitaar spelen en dagjes weg.
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-briefcase"></i>Werk
+          <span class="tooltiptext">
+            Ik werk bij PurpleBird. Een online marketing agency in Utrecht. 
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-book"></i>Studies
+          <span class="tooltiptext">
+            Na de Havo heb ik de opleiding Webdesign op het Grafisch Lyceum in Utrecht afgerond.
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-music"></i>Muziek
+          <span class="tooltiptext">
+            Ik luister naar van alles, voornamelijk The Weeknd, Tate McRae en Post Malone zijn mijn favoriet.
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-user"></i>Hover over me
+          <span class="tooltiptext">
+            Ik ben Amber, 21 jaar en ik kom uit Nieuwegein.
+          </span>
+        </div>
+       
+      </main>
+      <div class="qrcode">
+        <img src="assets/qrcode.png" alt="qr code portfolio van Amber Schalker">
+      </div>
+    </div>
+    <div class="flip-card-back">
+      <div class="back-container">
+      <button id="flip-card-btn-turn-to-front"> Switch to front</button>
+      <h1>Amber Schalker</h1>
+      <p>Student FDND</p>
+      <div class="divider"></div>
+      <ul>
+        <li>
+          <i class="fa fa-phone"></i>
+          <a href="tel:0655805033">0655805033</a>
+        </li>
+        <li>
+          <i class="fa fa-envelope"></i>
+          <a href="mailto:amber.schalker@hva.nl">amber.schalker@hva.nl</a>
+        </li>
+      </ul>
+      <div class="bottom-back">
+      <div class="socials">
+        <a href="https://www.instagram.com/amberschalker/" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/amber-schalker-0a82441b6/" class="fa fa-linkedin"></a>
+        <a href="https://dribbble.com/Schalker" class="fa fa-dribbble"></a>
+      </div>
+       <div class="qrcode">
+        <img src="assets/qrcode.png" alt="qr code portfolio van Amber Schalker">
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+
 </html>
